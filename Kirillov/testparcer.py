@@ -17,10 +17,10 @@ def get_total_pages(html):
 def write_csv(data):
     with open('avito.csv', 'a') as f:
         writer = csv.writer(f)
-        writer.writerow( (data['title'],
+        writer.writerow((data['title'],
                          data['price'],
                          data['metro'],
-                         data['url']) )
+                         data['url']))
 
 
 def get_page_data(html):
@@ -54,7 +54,7 @@ def get_page_data(html):
 
 def main():
     url = 'https://www.avito.ru/moskva/tovary_dlya_kompyutera/perenosnye_zhestkie_diski?p=1'
-    base_url = 'https://www.avito.ru/moskva/tovary_dlya_kompyutera/perenosnye_zhestkie_diski'
+    base_url = 'https://www.avito.ru/moskva/tovary_dlya_kompyutera/perenosnye_zhestkie_diski?'
     page_part = 'p='
 
     total_pages = get_total_pages(get_html(url))
